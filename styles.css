@@ -149,10 +149,15 @@ video {
 }
 
 .brand img {
-  width: 42px;
-  height: 42px;
-  border-radius: 16px;
-  box-shadow: 0 16px 34px rgba(255, 93, 162, 0.22);
+  width: 56px;
+  height: 56px;
+  padding: 6px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 143, 190, 0.18);
+  box-shadow: 0 16px 34px rgba(255, 93, 162, 0.18);
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
