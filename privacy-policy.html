@@ -8,19 +8,16 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="site-header">
+      <header class="site-header" data-site-header>
         <div class="header-inner">
-          <a class="brand" href="./index.html"><img src="./assets/endora-awareness-logo.svg" alt="Endora AI logo" /><span class="brand-copy"><strong>Endora AI</strong><span>Academy</span></span></a>
+          <a class="brand" href="./index.html">
+            <img class="brand-logo" src="./assets/logo.png" alt="Endora AI" width="200" height="48" />
+          </a>
           <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
           <nav class="site-nav" data-site-nav>
-            <a href="./index.html">Home</a>
-            <a href="./team.html">Platform</a>
             <a href="./publications.html">Workflow</a>
-            <a href="./security.html">Trust</a>
-            <a href="./privacy-policy.html" aria-current="page">Academy</a>
-            <a href="./website-terms-of-use.html">Specialists</a>
-            <a href="./patents.html">Ops</a>
-            <a class="cta" href="./product-regulatory-information.html">Book a Demo</a>
+            <a href="./team.html">Download</a>
+            <a class="cta nav-cta" href="./product-regulatory-information.html">Book a demo</a>
           </nav>
         </div>
       </header>
@@ -50,7 +47,65 @@
         </section>
       </main>
 
-      <footer class="footer"><div class="footer-inner"><div class="footer-grid"><div><h3>Endora AI</h3></div><div class="footer-links"><a href="./security.html">Trust</a><a href="./website-terms-of-use.html">Specialists</a></div><div><p class="fine-print">Academy content derived from `Education.tsx` and patient-facing screens.</p></div></div></div></footer>
+      <footer class="footer" id="site-footer">
+        <div class="footer-shell section">
+          <div class="footer-mega">
+            <div class="footer-brand-col">
+              <a class="footer-brand" href="./index.html">
+                <img class="footer-logo" src="./assets/logo.png" alt="Endora AI" width="200" height="52" />
+              </a>
+              <a class="footer-cta-card" href="./product-regulatory-information.html">
+                <span class="footer-cta-card__icon" aria-hidden="true">↓</span>
+                <span class="footer-cta-card__copy">
+                  <strong>Book a demo</strong>
+                  <span>Guided ultrasound and AI triage walkthrough</span>
+                </span>
+              </a>
+              <div class="footer-touch">
+                <p class="footer-touch__label">Get in touch</p>
+                <a class="footer-touch__accent" href="./product-regulatory-information.html">Request a walkthrough</a>
+              </div>
+            </div>
+            <nav class="footer-nav-col" aria-label="About">
+              <h3 class="footer-heading">About</h3>
+              <ul class="footer-list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./team.html">Platform</a></li>
+                <li><a href="./publications.html">Workflow</a></li>
+                <li><a href="./security.html">Trust &amp; safety</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Product">
+              <h3 class="footer-heading">Product</h3>
+              <ul class="footer-list">
+                <li><a href="./publications.html">Scan workflow</a></li>
+                <li><a href="./team.html">Download</a></li>
+                <li><a href="./product-regulatory-information.html">Book a demo</a></li>
+                <li><a href="./patents.html">Operations</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Patients and education">
+              <h3 class="footer-heading">Patients &amp; education</h3>
+              <ul class="footer-list">
+                <li><a href="./privacy-policy.html">Academy</a></li>
+                <li><a href="./website-terms-of-use.html">Specialists</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Legal">
+              <h3 class="footer-heading">Legal</h3>
+              <ul class="footer-list">
+                <li><a href="./privacy-policy.html">Privacy policy</a></li>
+                <li><a href="./security.html">Security</a></li>
+                <li><a href="./website-terms-of-use.html">Terms of use</a></li>
+                <li><a href="./product-regulatory-information.html">Regulatory information</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p class="footer-fine">© Endora AI. AI-assisted screening support only — not a diagnosis.</p>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./app.js"></script>
   </body>
