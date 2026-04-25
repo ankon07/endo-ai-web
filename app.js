@@ -1,8 +1,9 @@
 const toggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-site-nav]");
-const header = document.querySelector(".site-header");
+const header = document.querySelector("[data-site-header]") || document.querySelector(".site-header");
+const NAV_REVEAL_SCROLL = 80;
 const animatedItems = document.querySelectorAll(
-  ".hero-card, .section-header, .feature-card, .content-card, .media-card, .stat-card, .person-card, .legal-card, .quote-card"
+  ".hero-card, .hero-content, .did-you-know__inner, .section-header, .feature-card, .content-card, .media-card, .stat-card, .person-card, .legal-card, .quote-card, .journey-section__inner"
 );
 const shapes = document.querySelectorAll(".shape");
 
@@ -25,7 +26,8 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 
 if (header) {
   const syncHeader = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 24);
+    const scrolled = window.scrollY > NAV_REVEAL_SCROLL;
+    header.classList.toggle("is-scrolled", scrolled);
   };
 
   syncHeader();
@@ -58,6 +60,36 @@ if (!reduceMotion && animatedItems.length) {
   animatedItems.forEach((item) => item.classList.add("is-visible"));
 }
 
+const journeyRail = document.querySelector("[data-journey-rail]");
+const journeyPanels = journeyRail ? Array.from(journeyRail.querySelectorAll(".journey-panel")) : [];
+
+if (journeyRail && journeyPanels.length) {
+  const setJourneyActive = (index) => {
+    const i = Math.max(0, Math.min(index, journeyPanels.length - 1));
+    journeyPanels.forEach((panel, idx) => {
+      const active = idx === i;
+      panel.classList.toggle("is-active", active);
+      panel.setAttribute("aria-expanded", active ? "true" : "false");
+    });
+  };
+
+  setJourneyActive(0);
+
+  journeyPanels.forEach((panel, index) => {
+    panel.addEventListener("mouseenter", () => setJourneyActive(index));
+    panel.addEventListener("focusin", () => setJourneyActive(index));
+    panel.addEventListener("click", () => setJourneyActive(index));
+  });
+
+  journeyRail.addEventListener("mouseleave", () => setJourneyActive(0));
+
+  journeyRail.addEventListener("focusout", (event) => {
+    if (!journeyRail.contains(event.relatedTarget)) {
+      setJourneyActive(0);
+    }
+  });
+}
+
 if (!reduceMotion && shapes.length) {
   let ticking = false;
 
@@ -83,6 +115,94 @@ if (!reduceMotion && shapes.length) {
   updateShapes();
   window.addEventListener("scroll", onScroll, { passive: true });
 }
+
+const easeOutExpo = (t) => (t >= 1 ? 1 : 1 - Math.pow(2, -10 * t));
+
+const formatCountDisplay = (value, format) => {
+  const n = Math.round(value);
+  if (format === "comma-plus") {
+    if (n <= 0) return "0";
+    return `${n.toLocaleString("en-US")}+`;
+  }
+  return String(n);
+};
+
+const mountDidYouKnowCountUp = () => {
+  const root = document.querySelector("[data-did-you-know]");
+  if (!root) return;
+
+  const nums = [...root.querySelectorAll("[data-count-up]")];
+
+  const revealSecondaryStats = () => {
+    root.classList.add("did-you-know--visible");
+  };
+
+  const setFinals = () => {
+    nums.forEach((el) => {
+      const target = Number(el.dataset.value);
+      const format = el.dataset.format || "plain";
+      el.textContent = formatCountDisplay(target, format);
+    });
+  };
+
+  const animateOne = (el, delay) => {
+    const target = Number(el.dataset.value);
+    const format = el.dataset.format || "plain";
+    const duration =
+      el.dataset.duration != null && el.dataset.duration !== ""
+        ? Number(el.dataset.duration)
+        : target >= 1_000_000
+          ? 2400
+          : 1500;
+    let startAt = 0;
+
+    const tick = (now) => {
+      if (!startAt) {
+        startAt = now + delay;
+      }
+      if (now < startAt) {
+        requestAnimationFrame(tick);
+        return;
+      }
+      const elapsed = now - startAt;
+      const t = Math.min(1, elapsed / duration);
+      const eased = easeOutExpo(t);
+      const current = target * eased;
+      el.textContent = formatCountDisplay(current, format);
+      if (t < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = formatCountDisplay(target, format);
+      }
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  if (reduceMotion) {
+    setFinals();
+    revealSecondaryStats();
+    return;
+  }
+
+  let started = false;
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || started) return;
+        started = true;
+        revealSecondaryStats();
+        nums.forEach((el) => animateOne(el, 0));
+        io.disconnect();
+      });
+    },
+    { threshold: 0.22, rootMargin: "0px 0px -6% 0px" }
+  );
+
+  io.observe(root);
+};
+
+mountDidYouKnowCountUp();
 
 const chatbotConfig = {
   bookDemoLink: "./product-regulatory-information.html",
@@ -199,8 +319,8 @@ const mountChatbot = () => {
   const widget = document.createElement("aside");
   widget.className = "chatbot-widget";
   widget.innerHTML = `
-    <button class="chatbot-launcher" type="button" aria-expanded="false" aria-controls="chatbot-panel">
-      <span class="chatbot-launcher-dot"></span>
+    <button class="chatbot-launcher" type="button" aria-expanded="false" aria-controls="chatbot-panel" aria-label="Ask Endora AI">
+      <span class="chatbot-launcher-dot" aria-hidden="true"></span>
       <span>Ask Endora AI</span>
     </button>
     <section class="chatbot-panel" id="chatbot-panel" aria-hidden="true">

@@ -6,119 +6,66 @@
     <title>Endora AI</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-home">
     <div class="page-shell">
       <div class="shape one"></div>
       <div class="shape two"></div>
       <div class="shape three"></div>
 
-      <header class="site-header">
+      <header class="site-header" data-site-header>
         <div class="header-inner">
           <a class="brand" href="./index.html">
-            <img src="./assets/partners/logo.png" alt="Endora AI logo" />
-            <span class="brand-copy">
-              <strong>Endora AI</strong>
-              <span>AI-assisted endometriosis screening</span>
-            </span>
+            <img class="brand-logo" src="./assets/logo.png" alt="Endora AI" width="200" height="48" />
           </a>
           <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
           <nav class="site-nav" data-site-nav>
-            <a href="./index.html" aria-current="page">Home</a>
-            <a href="./team.html">Platform</a>
             <a href="./publications.html">Workflow</a>
-            <a href="./security.html">Trust</a>
-            <a href="./privacy-policy.html">Academy</a>
-            <a href="./website-terms-of-use.html">Specialists</a>
-            <a href="./patents.html">Ops</a>
-            <a class="cta" href="./product-regulatory-information.html">Book a Demo</a>
+            <a href="./team.html">Download</a>
+            <a class="cta nav-cta" href="./product-regulatory-information.html">Book a demo</a>
           </nav>
         </div>
       </header>
 
       <main>
-        <section class="hero">
-          <div class="section">
-            <div class="hero-card">
-              <div class="hero-copy">
-                <div class="eyebrow">Same product story, new web shell</div>
-                <h1>Early detection. Expert care. Anywhere.</h1>
-                <p>
-                  Endora AI brings the same core experience already present in this codebase into a dedicated website:
-                  guided scanning, AI-assisted triage, symptom capture, specialist review, and patient education for
-                  endometriosis care.
-                </p>
-                <p>
-                  The site is intentionally baby pink with a corporate Memphis edge: structured blocks, playful geometry,
-                  and clean enterprise messaging instead of generic med-tech minimalism.
-                </p>
-                <div class="button-row">
-                  <a class="cta" href="./product-regulatory-information.html">Book a Product Walkthrough</a>
-                  <a class="cta secondary" href="./publications.html">See the scan workflow</a>
-                </div>
-                <div class="pill-row">
-                  <span class="pill">5-view guided capture</span>
-                  <span class="pill">EndoNet v2.3 triage</span>
-                  <span class="pill">Human-in-the-loop review</span>
-                </div>
-              </div>
-              <div class="hero-media">
-                <video autoplay muted loop playsinline src="./assets/Endometriosis_Video_Generation.mp4"></video>
-                <div class="hero-overlay"></div>
-                <div class="hero-float">
-                  <strong>Core claim</strong>
-                  <p>AI-assisted screening only. Results are not a diagnosis. Specialist confirmation remains required.</p>
-                </div>
-              </div>
+        <section class="hero hero--fullbleed" aria-labelledby="hero-heading">
+          <div class="hero-backdrop" aria-hidden="true">
+            <div class="hero-bg-layer"></div>
+            <div class="hero-scrim"></div>
+          </div>
+          <div class="section hero-body">
+            <div class="hero-content">
+              <h1 id="hero-heading">Making her diagnosis faster, smarter and accessible</h1>
+              <p class="hero-sub">
+                Endora AI is an AI-powered platform for early detection of endometriosis, combining guided ultrasound,
+                explainable AI, and specialist access to deliver faster, more accessible care.
+              </p>
             </div>
           </div>
         </section>
 
-        <section class="section">
-          <div class="stats">
-            <article class="stat-card">
-              <div class="badge">Capture</div>
-              <div class="stat-value">5/5</div>
-              <p>Standard pelvic views tracked in the scan workflow.</p>
-            </article>
-            <article class="stat-card">
-              <div class="badge">Quality</div>
-              <div class="stat-value">89%</div>
-              <p>Representative “good” scan quality shown in the AI review flow.</p>
-            </article>
-            <article class="stat-card">
-              <div class="badge">Model</div>
-              <div class="stat-value">v2.3</div>
-              <p>EndoNet triage model label used in the app’s analysis screen.</p>
-            </article>
-            <article class="stat-card">
-              <div class="badge">Modes</div>
-              <div class="stat-value">3</div>
-              <p>Operator, specialist, and patient-facing workflows in one system.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <div>
-              <div class="badge">Product pillars</div>
-              <h2>Built directly from the app modules</h2>
+        <section class="did-you-know-band" data-did-you-know aria-labelledby="did-you-know-heading">
+          <div class="section did-you-know__inner">
+            <h2 class="did-you-know__title" id="did-you-know-heading">Did you know every year</h2>
+            <div class="did-you-know__grid">
+              <article class="did-you-know__item">
+                <p class="did-you-know__value">
+                  <span class="did-you-know__num" data-count-up data-value="190000000" data-format="comma-plus">0</span>
+                </p>
+                <p class="did-you-know__label">Women worldwide are affected by endometriosis</p>
+              </article>
+              <article class="did-you-know__item">
+                <p class="did-you-know__value did-you-know__value--reveal-up">
+                  <span class="did-you-know__prefix" aria-hidden="true">4</span><span class="did-you-know__dash" aria-hidden="true"> – </span><span class="did-you-know__num">12</span><span class="did-you-know__suffix" aria-hidden="true"> Years</span>
+                </p>
+                <p class="did-you-know__label">Average delay in diagnosis</p>
+              </article>
+              <article class="did-you-know__item did-you-know__item--inline-stat">
+                <p class="did-you-know__value did-you-know__value--reveal-slide">
+                  <span class="did-you-know__prefix" aria-hidden="true">1 in</span><span class="did-you-know__num">10</span><span class="did-you-know__suffix" aria-hidden="true">Women</span>
+                </p>
+                <p class="did-you-know__label">Experience endometriosis globally</p>
+              </article>
             </div>
-            <p>This website now reflects the actual product surface already implemented in the repo.</p>
-          </div>
-          <div class="section-grid three-up">
-            <article class="feature-card">
-              <h3>Guided Scan Capture</h3>
-              <p>Operators are guided through uterus sagittal, transverse, adnexal, and pouch of Douglas views with live quality feedback.</p>
-            </article>
-            <article class="feature-card">
-              <h3>AI Triage and Heatmaps</h3>
-              <p>Upload clips and images, run preprocessing and inference, then send a structured triage report for confirmation.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Patient Support Layer</h3>
-              <p>Symptom tracking, cycle logging, onboarding, education, appointments, and referrals stay connected to the care journey.</p>
-            </article>
           </div>
         </section>
 
@@ -131,15 +78,187 @@
                 <p>The product in this repo is designed around an operator-friendly mobile flow and a lightweight clinical handoff.</p>
               </div>
             </article>
-            <article class="quote-card">
-              <h3>What Endora AI is optimizing for</h3>
-              <ul class="list">
-                <li>Earlier screening signals for suspected endometriosis.</li>
-                <li>Consistent capture of the required views.</li>
-                <li>Safer escalation to specialist review.</li>
-                <li>Education that supports patients between visits.</li>
+            <div class="optimize-copy">
+              <h3 class="optimize-copy__title">What Endora AI is optimizing for</h3>
+              <ul class="optimize-copy__list">
+                <li>
+                  <strong>Earlier screening signals:</strong>
+                  richer symptom and cycle context alongside imaging cues so suspected endometriosis is easier to spot in routine visits, before pain or disease burden has silently progressed for years.
+                </li>
+                <li>
+                  <strong>Consistent capture:</strong>
+                  guided acquisition checklists and on-device prompts so operators collect the same pelvic views every time, cutting avoidable rescans and making longitudinal comparison between appointments actually usable.
+                </li>
+                <li>
+                  <strong>Safer escalation:</strong>
+                  clear, prioritized handoffs when AI or intake highlights high-concern patterns, ambiguous anatomy, or conflicting history so complex cases reach specialist review quickly instead of waiting in a general queue.
+                </li>
+                <li>
+                  <strong>Education:</strong>
+                  short, trustworthy explainers, visit prep, and between-visit reminders that help patients understand what was ordered, what to expect next, and how to advocate for follow-up without replacing clinician judgment.
+                </li>
               </ul>
-            </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section journey-section" aria-labelledby="journey-heading">
+          <div class="journey-section__inner reveal">
+            <header class="section-header journey-section__header">
+              <h2 id="journey-heading">Transforming journeys through better care</h2>
+            </header>
+            <div class="journey-rail" data-journey-rail role="list">
+              <article class="journey-panel journey-panel--1 is-active" tabindex="0" role="listitem" aria-expanded="true">
+                <div class="journey-panel__bg" aria-hidden="true"></div>
+                <div class="journey-panel__scrim" aria-hidden="true"></div>
+                <div class="journey-panel__inner">
+                  <div class="journey-panel__strip" aria-hidden="true">
+                    <span class="journey-panel__index">1</span>
+                    <span class="journey-panel__strip-title">From years of pain to early answers</span>
+                  </div>
+                  <div class="journey-panel__body">
+                    <h3 class="journey-panel__title">From years of pain to early answers</h3>
+                    <div class="journey-panel__story">
+                      <p>
+                        Ayesha, a 21-year-old student, had been living with severe period pain for years but was repeatedly
+                        told it was normal. Unsure and frustrated, she used Endora AI and visited a nearby clinic.
+                      </p>
+                      <p>
+                        With guided ultrasound scanning and AI-assisted analysis, her case was quickly reviewed by a specialist.
+                        Within days, she finally received clarity and a care plan, without years of uncertainty.
+                      </p>
+                    </div>
+                    <blockquote class="journey-panel__quote">
+                      <p>"Endora helped me understand what I was going through."</p>
+                    </blockquote>
+                  </div>
+                </div>
+              </article>
+
+              <article class="journey-panel journey-panel--2" tabindex="0" role="listitem" aria-expanded="false">
+                <div class="journey-panel__bg" aria-hidden="true"></div>
+                <div class="journey-panel__scrim" aria-hidden="true"></div>
+                <div class="journey-panel__inner">
+                  <div class="journey-panel__strip" aria-hidden="true">
+                    <span class="journey-panel__index">2</span>
+                    <span class="journey-panel__strip-title">Care that reaches her</span>
+                  </div>
+                  <div class="journey-panel__body">
+                    <h3 class="journey-panel__title">Care that reaches her</h3>
+                    <div class="journey-panel__story">
+                      <p>
+                        Fatima, living in a rural area, had limited access to gynecologists and could not afford frequent hospital
+                        visits. Through Endora AI, she visited a local clinic equipped with guided scanning.
+                      </p>
+                      <p>
+                        Her results were securely shared with a remote specialist, allowing her to receive diagnosis and treatment
+                        guidance without leaving her community.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="journey-panel journey-panel--3" tabindex="0" role="listitem" aria-expanded="false">
+                <div class="journey-panel__bg" aria-hidden="true"></div>
+                <div class="journey-panel__scrim" aria-hidden="true"></div>
+                <div class="journey-panel__inner">
+                  <div class="journey-panel__strip" aria-hidden="true">
+                    <span class="journey-panel__index">3</span>
+                    <span class="journey-panel__strip-title">Healthcare that fits her life</span>
+                  </div>
+                  <div class="journey-panel__body">
+                    <h3 class="journey-panel__title">Healthcare that fits her life</h3>
+                    <div class="journey-panel__story">
+                      <p>
+                        Nadia, a working professional, struggled with chronic pelvic pain but delayed seeking care due to her busy
+                        schedule. With Endora AI, she completed a quick screening and booked a remote consultation.
+                      </p>
+                      <p>
+                        She received expert advice and next steps efficiently, without disrupting her routine.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="journey-panel journey-panel--4" tabindex="0" role="listitem" aria-expanded="false">
+                <div class="journey-panel__bg" aria-hidden="true"></div>
+                <div class="journey-panel__scrim" aria-hidden="true"></div>
+                <div class="journey-panel__inner">
+                  <div class="journey-panel__strip" aria-hidden="true">
+                    <span class="journey-panel__index">4</span>
+                    <span class="journey-panel__strip-title">A voice and a safe space</span>
+                  </div>
+                  <div class="journey-panel__body">
+                    <h3 class="journey-panel__title">A voice and a safe space</h3>
+                    <div class="journey-panel__story">
+                      <p>
+                        Sara, unsure about her symptoms, felt uncomfortable discussing them openly. Through Endora's anonymous
+                        community, she asked questions and learned from others facing similar challenges.
+                      </p>
+                      <p>
+                        Encouraged by the support, she moved forward with screening and gained clarity and confidence in her health
+                        journey.
+                      </p>
+                    </div>
+                    <blockquote class="journey-panel__quote">
+                      <p>"I finally felt heard and understood."</p>
+                    </blockquote>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="partner-section">
+          <div class="section">
+            <div class="section-header">
+              <div>
+                <div class="badge">Collaboration & partnership</div>
+                <h2>Recognized by service adopters, care networks, and ecosystem partners</h2>
+              </div>
+            </div>
+          </div>
+          <div class="partner-marquee-wrap">
+            <div class="marquee-shell">
+              <div class="marquee-track">
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Suqare.jpeg" alt="Square Hospitals Ltd. logo" /><strong>Square Hospitals Ltd.</strong><span>Clinical pilot and referral-network partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/LabAID.jpeg" alt="Labaid Specialized Hospital logo" /><strong>Labaid Specialized Hospital</strong><span>Diagnostic workflow and specialist review partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Ibne.jpeg" alt="Ibn Sina logo" /><strong>Ibn Sina</strong><span>Service-acceptance and care-delivery network</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Brac.jpeg" alt="BRAC logo" /><strong>BRAC</strong><span>Community health access and outreach collaboration</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Sajida.jpeg" alt="Sajida Foundation logo" /><strong>Sajida Foundation</strong><span>Screening access and social-impact collaboration</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Matire.jpeg" alt="Marie Stopes Bangladesh logo" /><strong>Marie Stopes Bangladesh</strong><span>Women’s health distribution partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/UNDP.png" alt="UNDP logo" /><strong>UNDP</strong><span>Digital health and systems-strengthening partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/un-women.png" alt="UN Women logo" /><strong>UN Women</strong><span>Gender-equity and women’s health support</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/who.svg" alt="WHO logo" /><strong>WHO</strong><span>Standards-aligned health-system reference partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/startup-bangladesh.svg" alt="Startup Bangladesh logo" /><strong>Startup Bangladesh</strong><span>Innovation and venture ecosystem partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/bkash.png" alt="bKash logo" /><strong>bKash</strong><span>Digital payment and service-access enabler</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/AC.jpeg" alt="ACI logo" /><strong>ACI</strong><span>Healthcare distribution and market-access partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/icddrb.png" alt="icddr,b logo" /><strong>icddr,b</strong><span>Research credibility and evidence-support collaboration</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Gramnne.jpeg" alt="Grameenphone logo" /><strong>Grameenphone</strong><span>Connectivity and digital-access ecosystem partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/uniliver.jpeg" alt="Unilever logo" /><strong>Unilever</strong><span>Brand and awareness collaboration benchmark</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/IUT.jpeg" alt="IUT logo" /><strong>IUT</strong><span>Technical and innovation ecosystem alignment</span></article>
+
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Suqare.jpeg" alt="Square Hospitals Ltd. logo" /><strong>Square Hospitals Ltd.</strong><span>Clinical pilot and referral-network partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/LabAID.jpeg" alt="Labaid Specialized Hospital logo" /><strong>Labaid Specialized Hospital</strong><span>Diagnostic workflow and specialist review partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Ibne.jpeg" alt="Ibn Sina logo" /><strong>Ibn Sina</strong><span>Service-acceptance and care-delivery network</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Brac.jpeg" alt="BRAC logo" /><strong>BRAC</strong><span>Community health access and outreach collaboration</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Sajida.jpeg" alt="Sajida Foundation logo" /><strong>Sajida Foundation</strong><span>Screening access and social-impact collaboration</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Matire.jpeg" alt="Marie Stopes Bangladesh logo" /><strong>Marie Stopes Bangladesh</strong><span>Women’s health distribution partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/UNDP.png" alt="UNDP logo" /><strong>UNDP</strong><span>Digital health and systems-strengthening partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/un-women.png" alt="UN Women logo" /><strong>UN Women</strong><span>Gender-equity and women’s health support</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/who.svg" alt="WHO logo" /><strong>WHO</strong><span>Standards-aligned health-system reference partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/startup-bangladesh.svg" alt="Startup Bangladesh logo" /><strong>Startup Bangladesh</strong><span>Innovation and venture ecosystem partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/bkash.png" alt="bKash logo" /><strong>bKash</strong><span>Digital payment and service-access enabler</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/AC.jpeg" alt="ACI logo" /><strong>ACI</strong><span>Healthcare distribution and market-access partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/icddrb.png" alt="icddr,b logo" /><strong>icddr,b</strong><span>Research credibility and evidence-support collaboration</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Gramnne.jpeg" alt="Grameenphone logo" /><strong>Grameenphone</strong><span>Connectivity and digital-access ecosystem partner</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/uniliver.jpeg" alt="Unilever logo" /><strong>Unilever</strong><span>Brand and awareness collaboration benchmark</span></article>
+              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/IUT.jpeg" alt="IUT logo" /><strong>IUT</strong><span>Technical and innovation ecosystem alignment</span></article>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -149,7 +268,7 @@
               <div class="badge">Imaging gallery</div>
               <h2>Reference imagery and AI overlays</h2>
             </div>
-            <p>The image set combines local app assets with open-access ultrasound figures cited in the project docs.</p>
+           
           </div>
           <div class="section-grid three-up">
             <article class="media-card">
@@ -175,147 +294,64 @@
             </article>
           </div>
         </section>
-
-        <section class="section">
-          <div class="section-header">
-            <div>
-              <div class="badge">AI demo</div>
-              <h2>Endometriosis scan review with explainable AI support</h2>
-            </div>
-            <p>This section uses the local demo video to show how Endora AI can process scan footage, highlight suspicious regions, and support specialist escalation.</p>
-          </div>
-          <div class="section-grid two-up">
-            <article class="media-card">
-              <video controls playsinline preload="metadata" src="./assets/Endometriosis_Video_Generation.mp4"></video>
-              <div class="media-copy">
-                <h3>Endora AI Demo</h3>
-                <p>DICOM-style review flow with AI-assisted annotation of scan regions, completeness checks, and structured findings for suspected endometriosis workflows.</p>
-              </div>
-            </article>
-            <article class="content-card stack">
-              <div class="badge">What the demo shows</div>
-              <article class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none;">
-                <h3>1. Automatic image and cine clip analysis</h3>
-                <p>Captured scan content is processed through the AI pipeline to prepare views, normalize inputs, and surface clinically relevant frames for review.</p>
-              </article>
-              <article class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none;">
-                <h3>2. Live assessment of exam completeness</h3>
-                <p>Endora AI helps operators understand whether the required views and scan quality thresholds have been met during capture.</p>
-              </article>
-              <article class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none;">
-                <h3>3. Detailed AI evaluation for specialist follow-up</h3>
-                <p>Suspicious regions and explainability overlays help specialists review findings faster while keeping the final decision human-led.</p>
-              </article>
-            </article>
-          </div>
-        </section>
-
-        <section class="section partner-section">
-          <div class="section-header">
-            <div>
-              <div class="badge">Collaboration & partnership</div>
-              <h2>Recognized by service adopters, care networks, and ecosystem partners</h2>
-            </div>
-            <p>This trust band uses the organizations shown in your reference and presents them as collaboration, service-acceptance, research, and distribution partners.</p>
-          </div>
-          <div class="section-grid review-grid" style="margin-bottom: 22px;">
-            <article class="review-card">
-              <div class="review-head">
-                <div class="review-avatar">A</div>
-                <div class="review-meta">
-                  <strong>Ayesha, Dhaka</strong>
-                  <span class="review-stars">★★★★★</span>
-                </div>
-              </div>
-              <p>Tracking pain day by day helped me explain my symptoms properly to the gynecologist.</p>
-            </article>
-            <article class="review-card">
-              <div class="review-head">
-                <div class="review-avatar">N</div>
-                <div class="review-meta">
-                  <strong>Nusrat, Chattogram</strong>
-                  <span class="review-stars">★★★★☆</span>
-                </div>
-              </div>
-              <p>The scan and AI summary made it easier to understand what needed specialist review.</p>
-            </article>
-            <article class="review-card">
-              <div class="review-head">
-                <div class="review-avatar">M</div>
-                <div class="review-meta">
-                  <strong>Maliha, Rajshahi</strong>
-                  <span class="review-stars">★★★★★</span>
-                </div>
-              </div>
-              <p>I finally had one place for reports, appointments, and symptom patterns.</p>
-            </article>
-            <article class="review-card">
-              <div class="review-head">
-                <div class="review-avatar">T</div>
-                <div class="review-meta">
-                  <strong>Tanjina, Khulna</strong>
-                  <span class="review-stars">★★★★★</span>
-                </div>
-              </div>
-              <p>The community feed made me feel less alone while managing recurring pelvic pain.</p>
-            </article>
-          </div>
-          <div class="marquee-shell">
-            <div class="marquee-track">
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Suqare.jpeg" alt="Square Hospitals Ltd. logo" /><strong>Square Hospitals Ltd.</strong><span>Clinical pilot and referral-network partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/LabAID.jpeg" alt="Labaid Specialized Hospital logo" /><strong>Labaid Specialized Hospital</strong><span>Diagnostic workflow and specialist review partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Ibne.jpeg" alt="Ibn Sina logo" /><strong>Ibn Sina</strong><span>Service-acceptance and care-delivery network</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Brac.jpeg" alt="BRAC logo" /><strong>BRAC</strong><span>Community health access and outreach collaboration</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Sajida.jpeg" alt="Sajida Foundation logo" /><strong>Sajida Foundation</strong><span>Screening access and social-impact collaboration</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Matire.jpeg" alt="Marie Stopes Bangladesh logo" /><strong>Marie Stopes Bangladesh</strong><span>Women’s health distribution partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/UNDP.png" alt="UNDP logo" /><strong>UNDP</strong><span>Digital health and systems-strengthening partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/un-women.png" alt="UN Women logo" /><strong>UN Women</strong><span>Gender-equity and women’s health support</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/who.svg" alt="WHO logo" /><strong>WHO</strong><span>Standards-aligned health-system reference partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/startup-bangladesh.svg" alt="Startup Bangladesh logo" /><strong>Startup Bangladesh</strong><span>Innovation and venture ecosystem partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/bkash.png" alt="bKash logo" /><strong>bKash</strong><span>Digital payment and service-access enabler</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/AC.jpeg" alt="ACI logo" /><strong>ACI</strong><span>Healthcare distribution and market-access partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/icddrb.png" alt="icddr,b logo" /><strong>icddr,b</strong><span>Research credibility and evidence-support collaboration</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Gramnne.jpeg" alt="Grameenphone logo" /><strong>Grameenphone</strong><span>Connectivity and digital-access ecosystem partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/uniliver.jpeg" alt="Unilever logo" /><strong>Unilever</strong><span>Brand and awareness collaboration benchmark</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/IUT.jpeg" alt="IUT logo" /><strong>IUT</strong><span>Technical and innovation ecosystem alignment</span></article>
-
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Suqare.jpeg" alt="Square Hospitals Ltd. logo" /><strong>Square Hospitals Ltd.</strong><span>Clinical pilot and referral-network partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/LabAID.jpeg" alt="Labaid Specialized Hospital logo" /><strong>Labaid Specialized Hospital</strong><span>Diagnostic workflow and specialist review partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Ibne.jpeg" alt="Ibn Sina logo" /><strong>Ibn Sina</strong><span>Service-acceptance and care-delivery network</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Brac.jpeg" alt="BRAC logo" /><strong>BRAC</strong><span>Community health access and outreach collaboration</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Sajida.jpeg" alt="Sajida Foundation logo" /><strong>Sajida Foundation</strong><span>Screening access and social-impact collaboration</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Matire.jpeg" alt="Marie Stopes Bangladesh logo" /><strong>Marie Stopes Bangladesh</strong><span>Women’s health distribution partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/UNDP.png" alt="UNDP logo" /><strong>UNDP</strong><span>Digital health and systems-strengthening partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/un-women.png" alt="UN Women logo" /><strong>UN Women</strong><span>Gender-equity and women’s health support</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/who.svg" alt="WHO logo" /><strong>WHO</strong><span>Standards-aligned health-system reference partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/startup-bangladesh.svg" alt="Startup Bangladesh logo" /><strong>Startup Bangladesh</strong><span>Innovation and venture ecosystem partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/bkash.png" alt="bKash logo" /><strong>bKash</strong><span>Digital payment and service-access enabler</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/AC.jpeg" alt="ACI logo" /><strong>ACI</strong><span>Healthcare distribution and market-access partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/icddrb.png" alt="icddr,b logo" /><strong>icddr,b</strong><span>Research credibility and evidence-support collaboration</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/Gramnne.jpeg" alt="Grameenphone logo" /><strong>Grameenphone</strong><span>Connectivity and digital-access ecosystem partner</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/uniliver.jpeg" alt="Unilever logo" /><strong>Unilever</strong><span>Brand and awareness collaboration benchmark</span></article>
-              <article class="partner-tile"><img class="partner-logo" src="./assets/partners/IUT.jpeg" alt="IUT logo" /><strong>IUT</strong><span>Technical and innovation ecosystem alignment</span></article>
-            </div>
-          </div>
-        </section>
       </main>
 
-      <footer class="footer">
-        <div class="footer-inner">
-          <div class="footer-grid">
-            <div>
-              <h3>Endora AI</h3>
-              <p>Website clone reworked from the in-repo product flows for endometriosis screening and care support.</p>
+      <footer class="footer" id="site-footer">
+        <div class="footer-shell section">
+          <div class="footer-mega">
+            <div class="footer-brand-col">
+              <a class="footer-brand" href="./index.html">
+                <img class="footer-logo" src="./assets/logo.png" alt="Endora AI" width="200" height="52" />
+              </a>
+              <a class="footer-cta-card" href="./product-regulatory-information.html">
+                <span class="footer-cta-card__icon" aria-hidden="true">↓</span>
+                <span class="footer-cta-card__copy">
+                  <strong>Book a demo</strong>
+                  <span>Guided ultrasound and AI triage walkthrough</span>
+                </span>
+              </a>
+              <div class="footer-touch">
+                <p class="footer-touch__label">Get in touch</p>
+                <a class="footer-touch__accent" href="./product-regulatory-information.html">Request a walkthrough</a>
+              </div>
             </div>
-            <div class="footer-links">
-              <a href="./team.html">Platform</a>
-              <a href="./publications.html">Workflow</a>
-              <a href="./security.html">Trust & Safety</a>
-              <a href="./privacy-policy.html">Academy</a>
-            </div>
-            <div>
-              <p class="fine-print">Media includes local app assets plus open-access ultrasound figures and a public looping motion background.</p>
-            </div>
+            <nav class="footer-nav-col" aria-label="About">
+              <h3 class="footer-heading">About</h3>
+              <ul class="footer-list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./team.html">Platform</a></li>
+                <li><a href="./publications.html">Workflow</a></li>
+                <li><a href="./security.html">Trust &amp; safety</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Product">
+              <h3 class="footer-heading">Product</h3>
+              <ul class="footer-list">
+                <li><a href="./publications.html">Scan workflow</a></li>
+                <li><a href="./team.html">Download</a></li>
+                <li><a href="./product-regulatory-information.html">Book a demo</a></li>
+                <li><a href="./patents.html">Operations</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Patients and education">
+              <h3 class="footer-heading">Patients &amp; education</h3>
+              <ul class="footer-list">
+                <li><a href="./privacy-policy.html">Academy</a></li>
+                <li><a href="./website-terms-of-use.html">Specialists</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Legal">
+              <h3 class="footer-heading">Legal</h3>
+              <ul class="footer-list">
+                <li><a href="./privacy-policy.html">Privacy policy</a></li>
+                <li><a href="./security.html">Security</a></li>
+                <li><a href="./website-terms-of-use.html">Terms of use</a></li>
+                <li><a href="./product-regulatory-information.html">Regulatory information</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p class="footer-fine">© Endora AI. AI-assisted screening support only — not a diagnosis.</p>
           </div>
         </div>
       </footer>

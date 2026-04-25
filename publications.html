@@ -8,19 +8,16 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="site-header">
+      <header class="site-header" data-site-header>
         <div class="header-inner">
-          <a class="brand" href="./index.html"><img src="./assets/endora-awareness-logo.svg" alt="Endora AI logo" /><span class="brand-copy"><strong>Endora AI</strong><span>Workflow</span></span></a>
+          <a class="brand" href="./index.html">
+            <img class="brand-logo" src="./assets/logo.png" alt="Endora AI" width="200" height="48" />
+          </a>
           <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">Menu</button>
           <nav class="site-nav" data-site-nav>
-            <a href="./index.html">Home</a>
-            <a href="./team.html">Platform</a>
             <a href="./publications.html" aria-current="page">Workflow</a>
-            <a href="./security.html">Trust</a>
-            <a href="./privacy-policy.html">Academy</a>
-            <a href="./website-terms-of-use.html">Specialists</a>
-            <a href="./patents.html">Ops</a>
-            <a class="cta" href="./product-regulatory-information.html">Book a Demo</a>
+            <a href="./team.html">Download</a>
+            <a class="cta nav-cta" href="./product-regulatory-information.html">Book a demo</a>
           </nav>
         </div>
       </header>
@@ -67,9 +64,150 @@
             </article>
           </div>
         </section>
+
+        <section class="section">
+          <div class="stats">
+            <article class="stat-card">
+              <div class="badge">Capture</div>
+              <div class="stat-value">5/5</div>
+              <p>Standard pelvic views tracked in the scan workflow.</p>
+            </article>
+            <article class="stat-card">
+              <div class="badge">Quality</div>
+              <div class="stat-value">89%</div>
+              <p>Representative “good” scan quality shown in the AI review flow.</p>
+            </article>
+            <article class="stat-card">
+              <div class="badge">Model</div>
+              <div class="stat-value">v2.3</div>
+              <p>EndoNet triage model label used in the app’s analysis screen.</p>
+            </article>
+            <article class="stat-card">
+              <div class="badge">Modes</div>
+              <div class="stat-value">3</div>
+              <p>Operator, specialist, and patient-facing workflows in one system.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="badge">Product pillars</div>
+              <h2>Built directly from the app modules</h2>
+            </div>
+            
+          </div>
+          <div class="section-grid three-up">
+            <article class="feature-card">
+              <h3>Guided Scan Capture</h3>
+              <p>Operators are guided through uterus sagittal, transverse, adnexal, and pouch of Douglas views with live quality feedback.</p>
+            </article>
+            <article class="feature-card">
+              <h3>AI Triage and Heatmaps</h3>
+              <p>Upload clips and images, run preprocessing and inference, then send a structured triage report for confirmation.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Patient Support Layer</h3>
+              <p>Symptom tracking, cycle logging, onboarding, education, appointments, and referrals stay connected to the care journey.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="badge">AI demo</div>
+              <h2>Endometriosis scan review with explainable AI support</h2>
+            </div>
+            
+          </div>
+          <div class="section-grid two-up">
+            <article class="media-card">
+              <video controls playsinline preload="metadata" src="./assets/Endometriosis_Video_Generation.mp4"></video>
+              <div class="media-copy">
+                <h3>Endora AI Demo</h3>
+                <p>DICOM-style review flow with AI-assisted annotation of scan regions, completeness checks, and structured findings for suspected endometriosis workflows.</p>
+              </div>
+            </article>
+            <article class="content-card stack">
+              <div class="badge">What the demo shows</div>
+              <article class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none;">
+                <h3>1. Automatic image and cine clip analysis</h3>
+                <p>Captured scan content is processed through the AI pipeline to prepare views, normalize inputs, and surface clinically relevant frames for review.</p>
+              </article>
+              <article class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none;">
+                <h3>2. Live assessment of exam completeness</h3>
+                <p>Endora AI helps operators understand whether the required views and scan quality thresholds have been met during capture.</p>
+              </article>
+              <article class="feature-card" style="padding: 0; background: transparent; border: 0; box-shadow: none;">
+                <h3>3. Detailed AI evaluation for specialist follow-up</h3>
+                <p>Suspicious regions and explainability overlays help specialists review findings faster while keeping the final decision human-led.</p>
+              </article>
+            </article>
+          </div>
+        </section>
       </main>
 
-      <footer class="footer"><div class="footer-inner"><div class="footer-grid"><div><h3>Endora AI</h3></div><div class="footer-links"><a href="./team.html">Platform</a><a href="./website-terms-of-use.html">Specialists</a></div><div><p class="fine-print">Workflow copy sourced from `ScanWorkflow.tsx` and `AIAnalysis.tsx`.</p></div></div></div></footer>
+      <footer class="footer" id="site-footer">
+        <div class="footer-shell section">
+          <div class="footer-mega">
+            <div class="footer-brand-col">
+              <a class="footer-brand" href="./index.html">
+                <img class="footer-logo" src="./assets/logo.png" alt="Endora AI" width="200" height="52" />
+              </a>
+              <a class="footer-cta-card" href="./product-regulatory-information.html">
+                <span class="footer-cta-card__icon" aria-hidden="true">↓</span>
+                <span class="footer-cta-card__copy">
+                  <strong>Book a demo</strong>
+                  <span>Guided ultrasound and AI triage walkthrough</span>
+                </span>
+              </a>
+              <div class="footer-touch">
+                <p class="footer-touch__label">Get in touch</p>
+                <a class="footer-touch__accent" href="./product-regulatory-information.html">Request a walkthrough</a>
+              </div>
+            </div>
+            <nav class="footer-nav-col" aria-label="About">
+              <h3 class="footer-heading">About</h3>
+              <ul class="footer-list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./team.html">Platform</a></li>
+                <li><a href="./publications.html">Workflow</a></li>
+                <li><a href="./security.html">Trust &amp; safety</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Product">
+              <h3 class="footer-heading">Product</h3>
+              <ul class="footer-list">
+                <li><a href="./publications.html">Scan workflow</a></li>
+                <li><a href="./team.html">Download</a></li>
+                <li><a href="./product-regulatory-information.html">Book a demo</a></li>
+                <li><a href="./patents.html">Operations</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Patients and education">
+              <h3 class="footer-heading">Patients &amp; education</h3>
+              <ul class="footer-list">
+                <li><a href="./privacy-policy.html">Academy</a></li>
+                <li><a href="./website-terms-of-use.html">Specialists</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav-col" aria-label="Legal">
+              <h3 class="footer-heading">Legal</h3>
+              <ul class="footer-list">
+                <li><a href="./privacy-policy.html">Privacy policy</a></li>
+                <li><a href="./security.html">Security</a></li>
+                <li><a href="./website-terms-of-use.html">Terms of use</a></li>
+                <li><a href="./product-regulatory-information.html">Regulatory information</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p class="footer-fine">© Endora AI. AI-assisted screening support only — not a diagnosis.</p>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./app.js"></script>
   </body>
