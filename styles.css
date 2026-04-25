@@ -1901,6 +1901,10 @@ h3.footer-heading {
 }
 
 @media (max-width: 640px) {
+  .shape {
+    display: none;
+  }
+
   .header-inner,
   .section,
   .footer-shell {
